@@ -6,8 +6,11 @@
     "app"
   ],
   "scripts": {
+    "dev:api": "yarn workspace @directus/api run dev",
+    "dev:app": "yarn workspace @directus/app run dev"
   },
   "dependencies": {
+    "sharp": "^0.33.2"
   },
   "engines": {
     "node": ">=18.18.0"
