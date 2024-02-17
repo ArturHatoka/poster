@@ -49,10 +49,10 @@ export default defineConfig({
 	base: process.env.NODE_ENV === 'production' ? '' : '/admin/',
 	...(!process.env.HISTOIRE && {
 		server: {
-			port: 8055,
+			port: 8056,
 			proxy: {
 				'^/(?!admin)': {
-					target: process.env.API_URL ? process.env.API_URL : 'http://127.0.0.1:8055/',
+					target: process.env.API_URL ? process.env.API_URL : `http://127.0.0.1:8055/`,
 					changeOrigin: true,
 				},
 			},
